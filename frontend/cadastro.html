@@ -5,26 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
   <link rel="stylesheet" href="../css/estilo.css">
+  <script src="../js/cadastro.js" defer></script>
 </head>
 <body>
 
   <div class="container">
     <div class="form-box">
       <h2>Criar Conta</h2>
-      <form>
+      <form id="formCadastro">
         <div class="input-group">
           <label for="reg-name">Nome Completo</label>
-          <input type="text" id="reg-name" placeholder="Seu nome" required>
+          <input name="nome" type="text" id="reg-name" placeholder="Seu nome" required>
         </div>
 
         <div class="input-group">
           <label for="reg-email">E-mail</label>
-          <input type="email" id="reg-email" placeholder="seu@email.com" required>
+          <input name="email" type="email" id="reg-email" placeholder="seu@email.com" required>
         </div>
 
         <div class="input-group">
           <label for="reg-password">Senha</label>
-          <input type="password" id="reg-password" placeholder="••••••••" required>
+          <input name="senha" type="password" id="reg-password" placeholder="••••••••" required>
         </div>
 
         <button type="submit" class="btn">Cadastrar</button>

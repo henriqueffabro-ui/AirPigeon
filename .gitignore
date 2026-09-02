@@ -1,0 +1,20 @@
+# dependencias instaladas pelo npm, cada um roda npm install na sua maquina
+node_modules/
+
+# banco local de desenvolvimento, cada um tem o seu
+*.db
+
+# lixo que o sistema operacional cria sozinho dentro das pastas
+.DS_Store
+Thumbs.db
+
+# configuracao de editor, cada um usa o seu
+.idea/
+.vscode/
+
+# documento de escritorio e binario: o git nao faz diff e guarda cada versao inteira.
+# Esse tipo de arquivo fica no drive, nao aqui.
+*.docx
+*.doc
+*.xlsx
+*.pdf

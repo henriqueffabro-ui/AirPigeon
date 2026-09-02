@@ -26,11 +26,21 @@ backend/     → app Node/Express: server.js, db.js, rotas em routes/, schema.sq
 frontend/    → o site: index.html, cadastro, login, pombos + css/ js/ imgs/
 ```
 
-## Como rodar
+## Como preparar o backend
 
 ```bash
 cd backend
 npm install
+npm install express
+npm install express-session
+npm install better-sqlite3
+node db.js
+```
+
+## Como rodar
+
+```bash
+cd backend
 node server.js
 ```
 
