@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirPigeon - Aluguel de Pombos Correio</title>
+  <link rel="stylesheet" href="../css/pombos.css">
+  <script src="../js/pombos.js" defer></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="form-box">
+      <h2>AirPigeon 🕊️</h2>
+      <p class="subtitle">Selecione o pombo correio ideal para sua mensagem</p>
+
+      <div class="cards-grid">
+        
+        <div class="pigeon-card">
+          <div>
+            <img src="../imgs/passaro1.jpg" alt="Pombo Pena-Veloz" class="pigeon-img">
+            <div class="pigeon-name">Pena-Veloz</div>
+            <div class="pigeon-personality">Pontual, focado e super rápido. Ideal para entregas urgentes de até 10km.</div>
+          </div>
+          <div class="card-footer">
+            <span class="price">R$ 25</span>
+            <button class="btn">Alugar</button>
+          </div>
+        </div>
+
+        <div class="pigeon-card">
+          <div>
+            <img src="../imgs/passaro2.jpg" alt="Pombo Sombra" class="pigeon-img">
+            <div class="pigeon-name">Sombra</div>
+            <div class="pigeon-personality">Discreto, silencioso e cauteloso. Perfeito para mensagens confidenciais.</div>
+          </div>
+          <div class="card-footer">
+            <span class="price">R$ 40</span>
+            <button class="btn">Alugar</button>
+          </div>
+        </div>
+
+        <div class="pigeon-card">
+          <div>
+            <img src="../imgs/passaro3.jpg" alt="Pombo Aventureiro" class="pigeon-img">
+            <div class="pigeon-name">Aventureiro</div>
+            <div class="pigeon-personality">Sociável, destemido e resistente a tempestades. Adora voos longos.</div>
+          </div>
+          <div class="card-footer">
+            <span class="price">R$ 30</span>
+            <button class="btn">Alugar</button>
+          </div>
+        </div>
+
+        <div class="pigeon-card">
+          <div>
+            <img src="../imgs/pombo.jpeg" alt="Pombo Pena-Veloz" class="pigeon-img">
+            <div class="pigeon-name">Columbídeo</div>
+            <div class="pigeon-personality">Barato.</div>
+          </div>
+          <div class="card-footer">
+            <span class="price">R$ 5</span>
+            <button class="btn">Alugar</button>
+          </div>
+        </div>
+
+        <div class="pigeon-card">
+          <div>
+            <img src="../imgs/patriota.jpeg" alt="Pombo Sombra" class="pigeon-img">
+            <div class="pigeon-name">Patriota Bird</div>
+            <div class="pigeon-personality">Forte, resistente, veloz e dominante. O caçador ideal.</div>
+          </div>
+          <div class="card-footer">
+            <span class="price">U$ 80</span>
+            <button class="btn">Alugar</button>
+          </div>
+        </div>
+
+        <div class="pigeon-card">
+          <div>
+            <img src="../imgs/ptero.jpeg" alt="Pombo Aventureiro" class="pigeon-img">
+            <div class="pigeon-name">Pterodactyl</div>
+            <div class="pigeon-personality">Antiquado, fora de moda e vintage, mas funcional.</div>
+          </div>
+          <div class="card-footer">
+            <span class="price">R$ 20</span>
+            <button class="btn" onclick="chamarModal()">Alugar</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="switch-text">
+        Precisa de um plano corporativo? <a href="#">Fale com nosso pombal</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal-content">
+      <h3 id="modalTitle">Pagamento</h3>
+      
+      <div class="payment-options">
+        <label>
+          <input type="radio" name="paymentMethod" value="Pix" checked> Pix
+        </label>
+        <label>
+          <input type="radio" name="paymentMethod" value="Cartão de Crédito"> Cartão de Crédito
+        </label>
+        <label>
+          <input type="radio" name="paymentMethod" value="Milho/Alpiste"> Alpiste (Troca Físico-Anual)
+        </label>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-cancel" id="closeModal" onclick="fecharModal()">Cancelar</button>
+        <button class="btn" id="payBtn">Pagar</button>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
