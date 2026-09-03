@@ -26,3 +26,28 @@ db.exec(schemaSql);
 
 // Conecta o banco de dados para ser usado em outros arquivos
 module.exports = db;
+
+// Checa se já existe algum registro na tabela
+const count = db.prepare('SELECT COUNT(*) as total FROM passaros').get().total;
+
+// Se não houver registros, insere os dados iniciais
+if (count === 0) {
+const stmt = db.prepare(`
+  INSERT INTO passaros (nome_passaro, descricao, valor) VALUES 
+    (?, ?, ?),
+    (?, ?, ?),
+    (?, ?, ?),
+    (?, ?, ?),
+    (?, ?, ?),
+    (?, ?, ?)
+`);
+
+stmt.run(
+  'Pena-Veloz', 'Pontual, focado e super rápido. Ideal para entregas urgentes de até 10km.', '2500',
+  'Sombra', 'Discreto, silencioso e cauteloso. Perfeito para mensagens confidenciais.', '4000',
+  'Aventureiro', 'Sociável, destemido e resistente a tempestades. Adora voos longos.', '3000',
+  'Columbídeo', 'Barato.', '500',
+  'Patriota Bird', 'Forte, resistente, veloz e dominante. O caçador ideal.', '8000',
+  'Pterodactyl', 'Antiquado, fora de moda e vintage, mas funcional.', '2000'
+);
+}
