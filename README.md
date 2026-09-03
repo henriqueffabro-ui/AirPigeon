@@ -34,6 +34,7 @@ npm install
 npm install express
 npm install express-session
 npm install better-sqlite3
+npm install bcrypt
 node db.js
 ```
 
