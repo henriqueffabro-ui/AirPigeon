@@ -24,9 +24,10 @@ app.get("/ping", (req, res)=> {
 //assim funciona de qualquer pasta que o node for rodado
 app.use(express.static(path.join(__dirname, "../frontend")));
 
-
 //tudo que chegar em /api cai no arquivo routes/auth.js (cadastro, login, logout)
 app.use("/api", require("./routes/auth"));
+
+app.use("/api/passaros", require("./routes/passaros"));
 
 //iniciar servidor
 app.listen(PORT, () => {
